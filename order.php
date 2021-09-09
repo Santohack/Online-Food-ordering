@@ -15,7 +15,7 @@
     <section >
         <div class="container">
             
-            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+            <h2 class="text-center text-white">Complete your order</h2>
 
             <form action="" method="POST" class="order">
                 <fieldset>
@@ -71,10 +71,7 @@ else{
                     </div>
 
                 </fieldset>
-                
-                <fieldset>
-                    <legend>Delivery Details</legend>
-                    <?php 
+                <?php 
         
         if(isset($_POST['submit'])){
             $food = $_POST['food'];
@@ -103,13 +100,16 @@ else{
              $res2 = mysqli_query($conn,$sql1);
              if($res2==true){
 
-                 echo "Ordered Successfully";
+                 echo "<h6>Ordered Successfully </h6>  and <i>wait for accepting your order by restaurants </i>";
              }else{
                  echo " sorry we can't add you order";
              }
         }
     ?>
 
+                <fieldset>
+                    <legend>Delivery Details</legend>
+                    
                     <div class="order-label">Full Name</div>
                    
                     <input type="hidden" name="price" value="<?php echo $price; ?>">
@@ -128,8 +128,10 @@ else{
 
                     <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
                 </fieldset>
-
+  <a href="./admin/acceptorder.php"  class="btn btn-primary"> Check Status of your Order</a>
             </form>
+             
+          
 
         </div>
     </section>
