@@ -66,8 +66,8 @@ body {
     <th>Customer contact</th>
     <th>Customer email</th>
     <th>Customer Address</th>
-    <th>Update</th>
-    <th>Delete</th>
+    <th>Accepted</th>
+   
   </tr>
 
   
@@ -108,8 +108,8 @@ body {
     <td><?php echo $customer_contact; ?></td>
     <td><?php echo $customer_email; ?></td>
     <td><?php echo $customer_address; ?></td>
-    <td><a href="update_food.php?id=<?php echo $id; ?>">update </a></td>
-    <td><a href="delete_food.php?id=<?php echo $id; ?>">Delete</a></td>
+     <td><a href="acceptorder.php?id=<?php echo $id; ?>">accepted </a></td>
+   
   </tr>
   
                  <?php
